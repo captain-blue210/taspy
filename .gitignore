@@ -92,5 +92,7 @@ sw.*
 # Vim swap files
 *.swp
 
+__pycache__/
+local_settings.py
 
 

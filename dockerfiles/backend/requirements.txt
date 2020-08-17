@@ -3,3 +3,5 @@ djangorestframework
 django-webpack-loader
 django-cors-headers
 psycopg2
+gunicorn==20.0.4
+django-cors-headers

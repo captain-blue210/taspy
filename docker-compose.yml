@@ -5,6 +5,7 @@ services:
     container_name: taspy-frontend
     build: ./dockerfiles/frontend
     restart: always
+    command: ["npm", "run", "dev"]
     ports:
       - 3000:3000
     volumes:
@@ -20,7 +21,7 @@ services:
       - ./backend:/code
     depends_on:
       - db
-    command: ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+    command: ["gunicorn", "--bind", ":8000", "taspy_admin.wsgi"]
 
   db:
     container_name: taspy-db

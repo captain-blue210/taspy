@@ -21,7 +21,7 @@ services:
       - ./backend:/code
     depends_on:
       - db
-    command: ["gunicorn", "--bind", ":8000", "taspy_admin.wsgi"]
+    command: gunicorn --bind :8000 taspy_admin.wsgi
 
   db:
     container_name: taspy-db

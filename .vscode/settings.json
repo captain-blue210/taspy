@@ -1,4 +1,19 @@
 {
     "git.ignoreLimitWarning": true,
-    "python.pythonPath": "/Users/captain-blue/GitHub/taspy/env/bin/python3"
+    "python.pythonPath": "/Users/captain-blue/GitHub/taspy/env/bin/python3",
+    "sqltools.connections": [
+        {
+            "database": "test",
+            "driver": "PostgreSQL",
+            "name": "taspy_dev",
+            "password": "test",
+            "pgOptions": {
+                "ssl": {}
+            },
+            "port": 5433,
+            "previewLimit": 50,
+            "server": "localhost",
+            "username": "test"
+        }
+    ]
 }

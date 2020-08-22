@@ -5,4 +5,4 @@ class TaskJSONRenderer(JSONRenderer):
     charset = 'utf-8'
 
     def render(self, data, accepted_media_type=None, renderer_context=None):
-        return json.dumps({'task': data},ensure_ascii=False)
+        return json.dumps({'tasks': data},ensure_ascii=False)

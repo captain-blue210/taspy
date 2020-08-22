@@ -100,3 +100,5 @@ local_settings.py
 env/
 
 static/
+
+backend/taspy/migrations

@@ -1,24 +1,21 @@
 <template>
-  <div>テスト：{{ test }}</div>
+  <TaskList :tasks="tasks"></TaskList>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
-
+import TaskList from '../components/TaskList.vue'
 const axios = require('axios')
 
 export default {
   asyncData(){
-    let url = 'http://localhost:8000/api/get_person/'
+    let url = 'http://localhost:8000/api/get_tasks/'
     return axios.get(url)
       .then((res) => {
-        return { test: res.data }
+        return { tasks: res.data.tasks }
       })
   },
   components: {
-    Logo,
-    VuetifyLogo
+    TaskList,
   }
 }
 </script>

@@ -3,5 +3,5 @@ from .views import TaskListApiView
 
 
 urlpatterns = [
-    path('get_task/', TaskListApiView.as_view()),
+    path('get_tasks/', TaskListApiView.as_view()),
 ]

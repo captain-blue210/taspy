@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import TaskList from '../components/TaskList.vue'
 const axios = require('axios')
 
 export default {
@@ -14,8 +13,5 @@ export default {
         return { tasks: res.data.tasks }
       })
   },
-  components: {
-    TaskList,
-  }
 }
 </script>

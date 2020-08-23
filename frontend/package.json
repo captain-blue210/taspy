@@ -9,6 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "moment": "^2.27.0",
     "nuxt": "^2.14.0"
   },
   "devDependencies": {

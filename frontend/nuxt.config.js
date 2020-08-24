@@ -82,7 +82,7 @@ export default {
   build: {
   },
   axios: {
-    //baseURL: "http://backend:8000",
+    baseURL: "http://backend:8000",
   },
   server: {
     port: 3000,

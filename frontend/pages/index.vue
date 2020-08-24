@@ -1,16 +1,16 @@
 <template>
-  <TaskList :tasks="tasks"></TaskList>
+  <TaskList :tasks="task"></TaskList>
 </template>
 
 <script>
-const axios = require('axios')
+import axios from '~/plugins/axios'
 
 export default {
   asyncData(){
-    let url = 'http://localhost:8000/api/get_tasks/'
+    let url = '/api/task/'
     return axios.get(url)
       .then((res) => {
-        return { tasks: res.data.tasks }
+        return { task: res.data.task }
       })
   },
 }

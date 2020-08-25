@@ -109,7 +109,7 @@ export default {
                     this.showDialog = false
                     this.showAlert = true
                     this.message = 'タスクを登録しました。'
-                    redirect('/')
+                    this.$router.push('/')
                 })
         }
     }

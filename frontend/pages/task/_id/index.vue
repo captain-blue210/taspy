@@ -3,11 +3,11 @@
 </template>
 
 <script>
-const axios = require('axios')
+import axios from '~/plugins/axios'
 
 export default {
   asyncData({ params }){
-    let url = `http://localhost:8000/api/get_task_detail/${params.id}`
+    let url = `/api/task/${params.id}`
     return axios.get(url)
       .then((res) => {
         return { task: res.data.task }

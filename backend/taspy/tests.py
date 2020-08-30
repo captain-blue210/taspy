@@ -111,3 +111,16 @@ class TaskTests(TestCase):
             content_type='application/json'
         )
         self.assertEqual(Task.objects.count(), 0)
+
+    def test_404_task(self):
+        """
+        タスクが見つからなかったとき404を返す
+        """
+        task = Task.objects.create(
+            name = '404テスト',
+            expiration_dm = '2020-08-27',
+            status = 'OPEN'
+        )
+
+        res = self.client.get(reverse('task-detail', args=(9999,)))
+        self.assertEqual(res.status_code, 404)
